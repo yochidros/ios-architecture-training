@@ -12,7 +12,30 @@
 		F22FB921240639AB000E2BD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22FB91F240639AB000E2BD7 /* Main.storyboard */; };
 		F22FB923240639AC000E2BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22FB922240639AC000E2BD7 /* Assets.xcassets */; };
 		F22FB926240639AC000E2BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22FB924240639AC000E2BD7 /* LaunchScreen.storyboard */; };
+		F22FB93924063C2E000E2BD7 /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22FB93824063C2E000E2BD7 /* ToDoPresenter.swift */; };
+		F22FB93B24063CEC000E2BD7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22FB93A24063CEC000E2BD7 /* Task.swift */; };
+		F22FB93E24063CF7000E2BD7 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22FB93C24063CF7000E2BD7 /* ToDoTableViewCell.swift */; };
+		F22FB93F24063CF7000E2BD7 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22FB93D24063CF7000E2BD7 /* ToDoTableViewCell.xib */; };
+		F22FB94424063D32000E2BD7 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22FB94224063D32000E2BD7 /* RealmSwift.framework */; };
+		F22FB94524063D32000E2BD7 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F22FB94224063D32000E2BD7 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F22FB94624063D32000E2BD7 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22FB94324063D32000E2BD7 /* Realm.framework */; };
+		F22FB94724063D32000E2BD7 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F22FB94324063D32000E2BD7 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F22FB94824063D32000E2BD7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F22FB94724063D32000E2BD7 /* Realm.framework in Embed Frameworks */,
+				F22FB94524063D32000E2BD7 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F22FB916240639AB000E2BD7 /* TODO-MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TODO-MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +45,12 @@
 		F22FB922240639AC000E2BD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F22FB925240639AC000E2BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F22FB927240639AC000E2BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F22FB93824063C2E000E2BD7 /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
+		F22FB93A24063CEC000E2BD7 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F22FB93C24063CF7000E2BD7 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		F22FB93D24063CF7000E2BD7 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
+		F22FB94224063D32000E2BD7 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		F22FB94324063D32000E2BD7 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22FB94624063D32000E2BD7 /* Realm.framework in Frameworks */,
+				F22FB94424063D32000E2BD7 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +71,7 @@
 			children = (
 				F22FB918240639AB000E2BD7 /* TODO-MVP */,
 				F22FB917240639AB000E2BD7 /* Products */,
+				F22FB94124063D32000E2BD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +86,67 @@
 		F22FB918240639AB000E2BD7 /* TODO-MVP */ = {
 			isa = PBXGroup;
 			children = (
+				F22FB93024063AF6000E2BD7 /* Model */,
+				F22FB92F24063AF1000E2BD7 /* Presenter */,
+				F22FB92E24063AED000E2BD7 /* View */,
+				F22FB92D24063AE0000E2BD7 /* Support */,
 				F22FB919240639AB000E2BD7 /* AppDelegate.swift */,
-				F22FB91D240639AB000E2BD7 /* ViewController.swift */,
-				F22FB91F240639AB000E2BD7 /* Main.storyboard */,
+			);
+			path = "TODO-MVP";
+			sourceTree = "<group>";
+		};
+		F22FB92D24063AE0000E2BD7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				F22FB922240639AC000E2BD7 /* Assets.xcassets */,
 				F22FB924240639AC000E2BD7 /* LaunchScreen.storyboard */,
 				F22FB927240639AC000E2BD7 /* Info.plist */,
 			);
-			path = "TODO-MVP";
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F22FB92E24063AED000E2BD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F22FB93124063B05000E2BD7 /* Cell */,
+				F22FB91D240639AB000E2BD7 /* ViewController.swift */,
+				F22FB91F240639AB000E2BD7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F22FB92F24063AF1000E2BD7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F22FB93824063C2E000E2BD7 /* ToDoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F22FB93024063AF6000E2BD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F22FB93A24063CEC000E2BD7 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F22FB93124063B05000E2BD7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F22FB93C24063CF7000E2BD7 /* ToDoTableViewCell.swift */,
+				F22FB93D24063CF7000E2BD7 /* ToDoTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F22FB94124063D32000E2BD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F22FB94324063D32000E2BD7 /* Realm.framework */,
+				F22FB94224063D32000E2BD7 /* RealmSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +159,8 @@
 				F22FB912240639AB000E2BD7 /* Sources */,
 				F22FB913240639AB000E2BD7 /* Frameworks */,
 				F22FB914240639AB000E2BD7 /* Resources */,
+				F22FB94024063D14000E2BD7 /* ShellScript */,
+				F22FB94824063D32000E2BD7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,18 +212,44 @@
 				F22FB926240639AC000E2BD7 /* LaunchScreen.storyboard in Resources */,
 				F22FB923240639AC000E2BD7 /* Assets.xcassets in Resources */,
 				F22FB921240639AB000E2BD7 /* Main.storyboard in Resources */,
+				F22FB93F24063CF7000E2BD7 /* ToDoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F22FB94024063D14000E2BD7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F22FB912240639AB000E2BD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22FB93B24063CEC000E2BD7 /* Task.swift in Sources */,
 				F22FB91E240639AB000E2BD7 /* ViewController.swift in Sources */,
+				F22FB93924063C2E000E2BD7 /* ToDoPresenter.swift in Sources */,
 				F22FB91A240639AB000E2BD7 /* AppDelegate.swift in Sources */,
+				F22FB93E24063CF7000E2BD7 /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +395,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
-				INFOPLIST_FILE = "TODO-MVP/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/TODO-MVP/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,7 +418,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X25KZ54NYC;
-				INFOPLIST_FILE = "TODO-MVP/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/TODO-MVP/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
