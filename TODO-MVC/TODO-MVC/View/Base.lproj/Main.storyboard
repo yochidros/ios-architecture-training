@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16085" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16078.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TODO_MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j52-Am-9fk">
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6wc-lw-KFd">
+                                <rect key="frame" x="345" y="75" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onChangeValueWithSwitcher:" destination="BYZ-38-t0r" eventType="valueChanged" id="H7s-kq-jFE"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AN2-3v-BDM">
+                                <rect key="frame" x="249.5" y="80" width="81.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUH-1g-cQD">
+                                <rect key="frame" x="16" y="82" width="25" height="24"/>
+                                <connections>
+                                    <action selector="tappedAddButtonWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nff-RE-D2K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j52-Am-9fk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="05O-vN-Q1Q"/>
+                            <constraint firstItem="hUH-1g-cQD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Dn-46-g1c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6wc-lw-KFd" secondAttribute="trailing" constant="20" id="RVw-oJ-N5f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j52-Am-9fk" secondAttribute="bottom" id="SPi-pe-Oej"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j52-Am-9fk" secondAttribute="trailing" id="UO1-6V-ta1"/>
+                            <constraint firstItem="j52-Am-9fk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="an7-WE-W8M"/>
+                            <constraint firstItem="j52-Am-9fk" firstAttribute="top" secondItem="6wc-lw-KFd" secondAttribute="bottom" constant="18" id="j0t-Qo-5P4"/>
+                            <constraint firstItem="AN2-3v-BDM" firstAttribute="centerY" secondItem="6wc-lw-KFd" secondAttribute="centerY" id="pKJ-zv-MPV"/>
+                            <constraint firstItem="j52-Am-9fk" firstAttribute="top" secondItem="hUH-1g-cQD" secondAttribute="bottom" constant="18" id="swY-AW-Jze"/>
+                            <constraint firstItem="6wc-lw-KFd" firstAttribute="leading" secondItem="AN2-3v-BDM" secondAttribute="trailing" constant="14" id="vxO-sy-2Sg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="switcher" destination="6wc-lw-KFd" id="ehs-c4-Nci"/>
+                        <outlet property="tableView" destination="j52-Am-9fk" id="cq2-vs-It5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="139"/>
+        </scene>
+    </scenes>
+</document>
